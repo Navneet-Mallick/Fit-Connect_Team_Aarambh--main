@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/04/17/checklist-1867744_1280.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .bg-custom {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        }
+        .gradient-bg {
+            background: linear-gradient(90deg, rgba(58,123,213,1) 0%, rgba(0,210,255,1) 100%);
+            transition: background 0.3s ease;
+        }
+        .gradient-bg:hover {
+            background: linear-gradient(90deg, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
+        }
+        .fitconnect-logo {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .hover-shadow-lg:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hover-shadow-lg {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dropdown-enter-active,
+        .dropdown-leave-active {
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .dropdown-enter,
+        .dropdown-leave-to {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-gray-600 body-font bg-gradient-to-r from-indigo-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="./images/2.jpg" alt="Icon" class="w-auto h-20 text-white p-2 rounded-full transition-all hover:scale-105">
+                <span class="ml-3 text-xl font-semibold">FitConnect<br> Your partner in health and fitness</span>
+            </a>
+            <nav class="md:ml-auto flex flex-row items-center text-base space-x-4">
+                <button onclick='window.location.href="./"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Home</button>
+                <button onclick='window.location.href="./add-post"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Post</button>
+                <button onclick='window.location.href="./appointments"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Appointments</button>
+                <button onclick='window.location.href="./recommendations"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Nutritional Info</button>
+                <button onclick='window.location.href="./profile"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Profile</button>
+                    
+                
+                <button  onclick='window.location.href="./hospital"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Hospital Info</buttons>
+                    <button  onclick='window.location.href="./webinar"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Live Webinar</buttons>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main class="container mx-auto py-10">
+      
+        <div class="bg-white shadow-md rounded-lg p-6 mb-10">
+          <h2 class="text-2xl font-semibold mb-4">Live Webinars</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+         
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Healthy Living: Tips & Tricks</h3>
+              <p class="mb-4">
+                Join our experts for an interactive webinar on maintaining a balanced lifestyle with practical tips and tricks.
+              </p>
+              <button onclick='window.location.href="./video.html"' class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-300 "  >
+                Join Now
+              </button>
+
+            </div>
+            
+           
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Yoga for Beginners</h3>
+              <p class="mb-4">
+                Get started with yoga through this beginner-friendly webinar, featuring guided sessions and expert advice.
+              </p>
+              <button onclick='window.location.href="./video.html"' class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-300">
+                Join Now
+              </button>
+            </div>
+            
+           
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Nutrition Myths Busted</h3>
+              <p class="mb-4">
+                Discover the truth behind common nutrition myths and learn how to make healthier food choices.
+              </p>
+              <button onclick='window.location.href="./video.html"' class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-300">
+                Join Now
+              </button>
+            </div>
+          </div>
+        </div>
+      
+  
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h2 class="text-2xl font-semibold mb-4">Upcoming Webinars</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Mental Health Awareness</h3>
+              <p class="mb-4">
+                मिती: फेब्रुअरी २५, २०८१<br>
+                समय: २:०० अपराह्न - ३:३० अपराह्न (PST)
+              </p>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                Register Now
+              </button>
+            </div>
+            
+            
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Cardio Workouts at Home</h3>
+              <p class="mb-4">
+                मिती: फेब्रुअरी ३०, २०८१<br>
+                समय: १०:०० बिहान - ११:०० बिहान (PST)
+              </p>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                Register Now
+              </button>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Stress Management Techniques</h3>
+              <p class="mb-4">
+                मिती: मार्च ५, २०८१<br>
+                समय: ४:०० अपराह्न - ५:३० अपराह्न (PST)
+              </p>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+     
+      <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+          <p>&copy; २०८१ FitConnect. All rights reserved.</p>
+          <p>
+            Contact us: <a href="mailto:info@fitconnect.com" class="text-blue-400 hover:underline">info@fitconnect.com</a>
+          </p>
+        </div>
+      </footer>
+      
+
+
+
+    
+
+
+</body>
+</html>

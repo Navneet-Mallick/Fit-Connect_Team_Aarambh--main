@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Post </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hover-shadow-lg:hover {
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          transform: translateY(-5px);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hover-shadow-lg {
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dropdown-enter-active,
+        .dropdown-leave-active {
+          transition: opacity 0.5s, transform 0.5s;
+        }
+        .dropdown-enter,
+        .dropdown-leave-to {
+          opacity: 0;
+          transform: translateY(-20px);
+
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+  
+      </style>
+</head>
+<body class="bg-gray-100">
+    <header class="text-gray-600 body-font bg-gradient-to-r from-indigo-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="./images/2.jpg" alt="Icon" class="w-auto h-20 text-white p-2 rounded-full transition-all hover:scale-105">
+                <span class="ml-3 text-xl font-semibold">FitConnect<br> Your partner in health and fitness</span>
+            </a>
+            <nav class="md:ml-auto flex flex-row items-center text-base space-x-4">
+                <button onclick='window.location.href="./"'' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Home</button>
+                <button onclick='window.location.href="./add-post"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Post</button>
+                <button onclick='window.location.href="./appointments"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Appointments</button>
+                <button onclick='window.location.href="./recommendations"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Nutritional Info</button>
+                <button onclick='window.location.href="./profile"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Profile</button>
+                <div class="relative group">
+                    <button  onclick='window.location.href="./hospital"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Hospital Info</buttons>
+                        <button  onclick='window.location.href="./webinar"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Live Webinar</buttons>
+    
+            </nav>
+        </div>
+    </header>
+    <hr>
+
+    <div class="flex h-screen font-sans">
+
+        <div class="w-4/5 bg-gray-100 font-sans leading-normal tracking-normal">
+        
+            <div class="max-w-3xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Add Post</h2>
+                <form action="/add-post" method="POST" enctype="multipart/form-data" class="space-y-4">
+                    <div>
+                        <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+                        <input type="text" name="title" id="title" placeholder="Title" required class="mt-1 p-2 bg-gray-100 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
+                        <textarea name="content" id="content" placeholder="Content" required class="mt-1 p-2 bg-gray-100 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+                    <div>
+                        <label for="photo" class="block text-sm font-medium text-gray-700">Photo</label>
+                        <input type="file" name="photo" id="photo" accept="image/*" class="mt-1 p-2 bg-gray-100 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="flex justify-center">
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Add Post</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+       
+        const menuButton = document.getElementById("menuButton");
+        const dropdown = document.getElementById("dropdown");
+
+        menuButton.addEventListener("click", function () {
+        
+            dropdown.classList.toggle("hidden");
+        });
+
+      
+        window.addEventListener("click", function (e) {
+            if (!menuButton.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add("hidden");
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .image-styled {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-styled:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="text-gray-600 body-font bg-gradient-to-r from-indigo-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="images/2.jpg" alt="Profile Icon" class="w-auto h-20 p-2 rounded-full transition-transform hover:scale-105">
+                <span class="ml-3 text-xl font-semibold">
+                    FitConnect<br>Your partner in health and fitness
+                </span>
+            </a>
+            <nav class="md:ml-auto flex flex-row items-center text-base space-x-4">
+                <!-- Buttons -->
+                <button onclick='window.location.href="./"' 
+                        class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:ring focus:ring-indigo-300 transition">
+                    Home
+                </button>
+                <button onclick='window.location.href="./add-post"' 
+                        class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:ring focus:ring-indigo-300 transition">
+                    Post
+                </button>
+                <button onclick='window.location.href="./appointments"' 
+                        class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:ring focus:ring-indigo-300 transition">
+                    Appointments
+                </button>
+                <button onclick='window.location.href="./recommendations"' 
+                        class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:ring focus:ring-indigo-300 transition">
+                    Nutritional Info
+                </button>
+                <button onclick='window.location.href="./profile"' 
+                        class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:ring focus:ring-indigo-300 transition">
+                    Profile
+                </button>
+                <button  onclick='window.location.href="./hospital"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Hospital Info</buttons>
+                    <button  onclick='window.location.href="./webinar"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Live Webinar</buttons>
+
+            </nav>
+        </div>
+    </header>
+    <hr>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-5">
+        <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+            <!-- Profile Header -->
+            <div class="flex items-center space-x-4">
+                <img src="https://m.media-amazon.com/images/I/51SkvIwqvvL.jpg" alt="User Avatar" class="w-24 h-24 rounded-full shadow-lg">
+                <div>
+                    <h1 class="text-3xl font-semibold text-gray-900"> <%= user.name %></h1>
+                    <p class="text-gray-600">Health Enthusiast</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Details Card -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800 border-b pb-2">Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p class="text-gray-800"><strong>Email:</strong> 123@gmail.com</p>
+                </div>
+                <div>
+                    <p class="text-gray-800"><strong>Location:</strong> Dharan, Nepal</p>
+                </div>
+                <div>
+                    <p class="text-gray-800"><strong>Joined:</strong> January 2023</p>
+                </div>
+                <div>
+                    <p class="text-gray-800"><strong>Interests:</strong> Running, Yoga, Gym, Fitness</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activities Card -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800 border-b pb-2">Recent Activities</h2>
+            <ul class="list-disc list-inside text-gray-800">
+                <li>Posted a new recipe for a healthy salad.</li>
+                <li>Shared a blog post about the benefits of morning yoga.</li>
+                <li>Uploaded a photo from the latest marathon event.</li>
+            </ul>
+        </div>
+
+        <!-- Uploaded Photos Card -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800 border-b pb-2">Uploaded Photos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://images.yourstory.com/cs/wordpress/2017/05/Dwayne-Johnson.jpg?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75" 
+                     alt="Photo 1" class="image-styled">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/6504630c3d69b479bdfdab51/Co-Founder-and-Chief-Energy-Officer-for-ZOA-Energy--Dwayne--The-Rock--Johnson-/0x0.jpg?format=jpg&crop=1543,868,x0,y163,safe&width=960" 
+                     alt="Photo 2" class="image-styled">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2R-BiBttZSNmOrrD0BQQvePS-9q8g7AC2MA&s" 
+                     alt="Photo 3" class="image-styled">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

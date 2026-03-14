@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Confirmation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-custom {
+            background-color:rgb(19, 67, 164) 
+        }
+        .fitconnect-logo {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-custom" >
+    <div class="container mx-auto p-5">
+        <header class="text-gray-600 body-font mb-5">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    <img src="./images/2.jpg" alt="FitConnect Logo" class="fitconnect-logo">
+                    <span class="ml-3 text-xl text-white">FitConnect:<br> Your partner in health and fitness</span>
+                </a>
+            </div>
+        </header>
+        <div class="flex flex-wrap -mx-3 items-center justify-center">
+            <div class="w-full lg:w-3/5 px-3 mb-6 lg:mb-0" ">
+                <div class="bg-blue-350 shadow-md rounded-lg p-6" style="color: greenyellow; border: 1px solid greenyellow;">
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-800 " style="color: greenyellow; text-decoration: underline;" >Appointment Confirmation</h2>
+                    <p><strong>Name:</strong> <%= name %></p>
+                    <p><strong>Email:</strong> <%= email %></p>
+                    <p><strong>Date:</strong> <%= date %></p>
+                    <p><strong>Time:</strong> <%= time %></p>
+                    <p><strong>Doctor:</strong> <%= doctor %></p>
+                    <p><strong>Contact:</strong> doctor@example.com</p>
+                    <p><strong>Consultation Room:</strong> Room 101</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-2/5 px-3">
+                <img src="https://cdn.pixabay.com/photo/2019/09/12/15/54/calendar-4471966_640.jpg" alt="Calendar" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hover-shadow-lg:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hover-shadow-lg {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="text-gray-600 body-font bg-gradient-to-r from-indigo-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="./images/2.jpg" alt="Icon" class="w-auto h-20 text-white p-2 rounded-full transition-all hover:scale-105">
+                <span class="ml-3 text-xl font-semibold">FitConnect<br> Your partner in health and fitness</span>
+            </a>
+            <nav class="md:ml-auto flex flex-row items-center text-base space-x-4">
+                <button onclick='window.location.href="./"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Home</button>
+                <button onclick='window.location.href="./add-post"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Post</button>
+                <button onclick='window.location.href="./appointments"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Appointments</button>
+                <button onclick='window.location.href="./recommendations"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Nutritional Info</button>
+                <button onclick='window.location.href="./profile"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Profile</button>
+                <button onclick='window.location.href="./hospital"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Hospital Info</button>
+                <button onclick='window.location.href="./webinar"' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Live Webinar</button>
+            </nav>
+        </div>
+    </header>
+    <hr>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-5">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Hospitals in Nepal</h2>
+
+            <!-- Province Filter -->
+           <form action="/hospital" method="POST" class="mb-4">
+    <div class="flex items-center space-x-4">
+        <label for="province" class="block text-gray-700 font-semibold">Select Province:</label>
+        <select name="province" id="province" class="block w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600">
+            <% (provinces || []).forEach(function(province) { %>
+                <option value="<%= province %>"><%= province %></option>
+            <% }) %>
+        </select>
+        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">Fetch Hospitals</button>
+    </div>
+</form>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <% (hospitals || []).forEach(function(hospital) { %>
+        <div class="bg-white p-4 rounded shadow-md hover-shadow-lg">
+            <h3 class="text-xl font-bold mb-2"><%= hospital.name || "Unnamed Hospital" %></h3>
+            <p class="text-gray-600"><strong>Location:</strong> <%= hospital.location || "N/A" %></p>
+            <p class="text-gray-600"><strong>Contact:</strong> <%= hospital.contact || "N/A" %></p>
+            <p class="text-gray-600"><strong>Services:</strong> <%= (hospital.services || []).join(', ') %></p>
+        </div>
+    <% }) %>
+</div>
+</body>
+</html>

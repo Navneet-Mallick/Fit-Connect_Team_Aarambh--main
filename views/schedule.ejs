@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-custom {
+            background-color: rgb(19, 67, 164);
+        }
+        .fitconnect-logo {
+            width: 100px;
+            height: auto;
+        }
+        .card-header {
+            color: greenyellow;
+            text-decoration: underline;
+        }
+        .card-body {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body class="bg-custom">
+    <div class="container mx-auto p-5">
+        <!-- Header -->
+        <header class="text-gray-600 body-font mb-5">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    <img src="./images/2.jpg" alt="FitConnect Logo" class="fitconnect-logo">
+                    <span class="ml-3 text-xl text-white">FitConnect:<br> Your partner in health and fitness</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Schedule Section -->
+        <div class="flex flex-wrap -mx-3 justify-center">
+            <% if (appointments && appointments.length > 0) { %>
+                <% appointments.forEach(function(appointment){ %>
+                    <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                        <div class="bg-blue-350 shadow-md rounded-lg p-6 border" style="border-color: greenyellow;">
+                            <h2 class="text-2xl font-semibold mb-4 card-header">Appointment</h2>
+                            <p class="card-body"><strong>Name:</strong> <%= appointment.name %></p>
+                            <p class="card-body"><strong>Email:</strong> <%= appointment.email %></p>
+                            <p class="card-body"><strong>Date:</strong> <%= appointment.date %></p>
+                            <p class="card-body"><strong>Time:</strong> <%= appointment.time %></p>
+                            <p class="card-body"><strong>Doctor:</strong> <%= appointment.doctor %></p>
+                            <p class="card-body"><strong>Contact:</strong> doctor@example.com</p>
+                            <p class="card-body"><strong>Consultation Room:</strong> Room 101</p>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p class="text-white text-center text-xl mt-10">No appointments scheduled.</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

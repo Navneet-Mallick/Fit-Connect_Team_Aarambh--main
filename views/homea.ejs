@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hover-shadow-lg:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .hover-shadow-lg {
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .dropdown-enter-active,
+      .dropdown-leave-active {
+        transition: opacity 0.5s, transform 0.5s;
+      }
+      .dropdown-enter,
+      .dropdown-leave-to {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <header class="text-gray-600 body-font bg-gradient-to-r from-indigo-500 to-indigo-600 shadow-lg">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <img src="./images/2.jpg" alt="Icon" class="w-auto h-20 text-white p-2 rounded-full transition-all hover:scale-105">
+                <span class="ml-3 text-xl font-semibold">FitConnect<br> Your partner in health and fitness</span>
+            </a>
+            <nav class="md:ml-auto flex flex-row items-center text-base space-x-4">                <button onclick='window.location.href="./"'' class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Home</button>
+                <button onclick='window.location.href="./add-post"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Post</button>
+                <button onclick='window.location.href="./appointments"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Appointments</button>
+                <button onclick='window.location.href="./recommendations"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Nutritional Info</button>
+                <button onclick='window.location.href="./profile"'class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Profile</button>
+                
+                <button  onclick='window.location.href="./hospital"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Hospital Info</buttons>
+                  <button  onclick='window.location.href="./webinar"'  class="p-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition duration-300">Live Webinar</buttons>
+
+            </nav>
+        </div>
+    </header>
+    <div class="grid grid-cols-1 gap-6 mb-6">
+      <!-- Post 1: Doctor's Advice -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Dr. John Doe (Cardiologist)</h3>
+              <p class="text-gray-500 text-sm">0 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Regular exercise is essential for heart health. Make sure to aim for at least 30 minutes of cardio a day!"</p>
+      </div>
+
+      <!-- Post 2: Gym Trainer Advice -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Jane Smith (Personal Trainer)</h3>
+              <p class="text-gray-500 text-sm">0 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"To build strength, focus on compound exercises like squats, deadlifts, and bench presses. Train with purpose!"</p>
+      </div>
+
+      <!-- Post 3: Healthy Eating Advice -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Laura White (Nutritionist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"A balanced diet is key to overall health. Include a variety of fruits, vegetables, and lean proteins in your meals!"</p>
+      </div>
+
+      <!-- Post 4: Motivational Quote -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Emily Johnson (Therapist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"The journey to mental well-being starts with small steps. Focus on progress, not perfection." — Emily</p>
+      </div>
+
+      <!-- Post 5: Exercise Tips -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Mark Taylor (Personal Trainer)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Stretching before and after your workout can help prevent injuries and improve flexibility." — Mark</p>
+      </div>
+
+      <!-- Post 6: Doctor's Advice on Hydration -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Dr. Susan Lee (General Practitioner)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Staying hydrated is critical for maintaining energy and focus throughout the day. Drink water regularly!"</p>
+      </div>
+
+      <!-- Post 7: Healthy Habits -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Jessica Brown (Health Coach)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Prioritize quality sleep. Aim for 7-9 hours each night to recharge both your body and mind."</p>
+      </div>
+
+      <!-- Post 8: Post-Workout Nutrition -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">David Green (Nutritionist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"After a workout, make sure to refuel your body with protein and healthy carbs to aid recovery."</p>
+      </div>
+
+      <!-- Post 9: Fitness Tip -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Brian Harris (Fitness Expert)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Consistency is key when it comes to fitness. Small efforts every day lead to big results over time!"</p>
+      </div>
+
+      <!-- Post 10: Exercise Routine Advice -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Sarah Williams (Trainer)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Start your workout with a warm-up to get your body ready for more intense exercise!"</p>
+      </div>
+
+      <!-- Post 11: Mental Health Advice -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Michael Adams (Psychologist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Take time for self-care. A few minutes of mindfulness can make a big difference in reducing stress!"</p>
+      </div>
+
+      <!-- Post 12: Stress Management Tips -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Lisa Thomas (Therapist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Manage stress by practicing deep breathing exercises. It helps calm the mind and body."</p>
+      </div>
+
+      <!-- Post 13: Weight Loss Tips -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Karen Clark (Nutritionist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Weight loss is all about creating a calorie deficit, but make sure to do it in a healthy way!"</p>
+      </div>
+
+      <!-- Post 14: Sleep and Recovery -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Jake Miller (Sleep Specialist)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Sleep is your body’s natural recovery process. Prioritize quality sleep to perform at your best!"</p>
+      </div>
+
+      <!-- Post 15: Motivational Quote -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Natalie Roberts (Coach)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"The only limit to your success is your willingness to work for it!"</p>
+      </div>
+
+      <!-- Post 16: Daily Exercise Tip -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Tom Walker (Trainer)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Don't skip leg day! Strong legs support your entire body. Add squats and lunges to your routine!"</p>
+      </div>
+
+      <!-- Post 17: Healthy Eating Habits -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Rebecca Davis (Dietitian)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Eat a variety of colorful foods. Different colors mean different nutrients!"</p>
+      </div>
+
+      <!-- Post 18: Advice on Posture -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Olivia Young (Chiropractor)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Good posture improves your breathing, energy levels, and overall mood. Sit up straight!"</p>
+      </div>
+
+      <!-- Post 19: Fitness Motivation -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Ethan King (Trainer)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Fitness is not about being better than someone else. It’s about being better than you were yesterday!"</p>
+      </div>
+
+      <!-- Post 20: Stretching Advice -->
+      <div class="bg-white p-4 rounded shadow-md hover:shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+              <h3 class="text-xl font-bold">Sophia Moore (Yoga Instructor)</h3>
+              <p class="text-gray-500 text-sm">1 day ago</p>
+          </div>
+          <p class="text-gray-700 mb-4">"Incorporating stretching into your daily routine helps with flexibility and reduces muscle stiffness!"</p>
+      </div>
+  </div>
+    <div class="container mx-auto flex flex-wrap p-5">
+      <div class="w-full lg:w-3/4 p-4">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">
+          Welcome, <%= user.name %>
+        </h1>
+        <div class="max-w-3xl mx-auto my-8 p-6 bg-white shadow-md rounded-lg">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-800">Posts</h2>
+          <div class="grid grid-cols-1 gap-6">
+            <% posts.forEach(function(post) { %>
+            <div class="bg-white p-4 rounded shadow-md hover-shadow-lg">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-bold"><%= post.user_name %></h3>
+                <p class="text-gray-500 text-sm">
+                  <%= new Date(post.created_at).toLocaleString() %>
+                </p>
+              </div>
+              <% if (post.photo) { %>
+              <img
+                src="/<%= post.photo %>"
+                alt="Post Photo"
+                class="w-full h-auto mb-2 rounded-lg hover:scale-105 transition duration-300"
+              />
+              <% } else { %>
+              <img
+                src="https://source.unsplash.com/random/800x600"
+                alt="Random Image"
+                class="w-full h-auto mb-2 rounded-lg hover:scale-105 transition duration-300"
+              />
+              <% } %>
+              <p class="text-gray-700 mb-4"><%= post.content %></p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                  <button
+                    class="flex items-center space-x-1 like-button text-gray-600 hover:text-blue-600 transition duration-300"
+                    onclick="toggleLike(this)"
+                  >
+                    <span class="icon">👍</span>
+                    <span class="like-count">0</span>
+                  </button>
+                  <button
+                    class="flex items-center space-x-1 comment-button text-gray-600 hover:text-blue-600 transition duration-300"
+                    onclick="toggleComment(this)"
+                  >
+                    <span class="icon">💬</span>
+                    <span class="comment-count">0</span>
+                  </button>
+                  <button
+                    class="flex items-center space-x-1 share-button text-gray-600 hover:text-blue-600 transition duration-300"
+                    onclick="toggleShare(this)"
+                  >
+                    <span class="icon">🔄</span>
+                    <span class="share-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <aside class="w-full lg:w-1/4 p-4">
+        <div class="bg-white rounded shadow-md p-4">
+          <h2 class="text-lg font-semibold mb-4">Followed Users</h2>
+          <ul>
+            <li class="mb-2">
+              <div class="flex items-center space-x-2">
+                <img
+                  src="https://via.placeholder.com/50"
+                  alt="User 1"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span>Pratik Acharya</span>
+              </div>
+            </li>
+            <li class="mb-2">
+              <div class="flex items-center space-x-2">
+                <img
+                  src="https://via.placeholder.com/50"
+                  alt="User 2"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span>Navnit Mallick</span>
+              </div>
+            </li>
+            <li class="mb-2">
+              <div class="flex items-center space-x-2">
+                <img
+                  src="https://via.placeholder.com/50"
+                  alt="User 3"
+                  class="w-8 h-8 rounded-full"
+                />
+                <span>Pramod Dhami</span>
+              </div>
+            </li>
+            <li class="mb-2">
+                <div class="flex items-center space-x-2">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="User 3"
+                    class="w-8 h-8 rounded-full"
+                  />
+                  <span>Prashant Shah</span>
+                </div>
+              </li>
+
+          </ul>
+        </div>
+      </aside>
+    </div>
+      <script> 
+        function toggleLike(button) {
+             const likeCountSpan = button.querySelector('.like-count'); 
+             const icon = button.querySelector('.icon'); 
+             if (button.classList.contains('liked')) {
+                 button.classList.remove('liked'); 
+                 icon.textContent = '👍'; 
+                 likeCountSpan.textContent = parseInt(likeCountSpan.textContent) - 1; } 
+                 else { button.classList.add('liked'); icon.textContent = '❤️'; likeCountSpan.textContent = parseInt(likeCountSpan.textContent) + 1; } }
+
+                 function toggleComment(button) {
+    const commentCountSpan = button.querySelector('.comment-count');
+    const icon = button.querySelector('.icon');
+
+    if (button.classList.contains('commented')) {
+        button.classList.remove('commented');
+        icon.textContent = '💬';
+        commentCountSpan.textContent = parseInt(commentCountSpan.textContent) - 1;
+    } else {
+        button.classList.add('commented');
+        icon.textContent = '🗨️';
+        commentCountSpan.textContent = parseInt(commentCountSpan.textContent) + 1;
+    }
+}
+
+function toggleShare(button) {
+    const shareCountSpan = button.querySelector('.share-count');
+    const icon = button.querySelector('.icon');
+
+    if (button.classList.contains('shared')) {
+        button.classList.remove('shared');
+        icon.textContent = '🔄';
+        shareCountSpan.textContent = parseInt(shareCountSpan.textContent) - 1;
+    } else {
+        button.classList.add('shared');
+        icon.textContent = '✅';
+        shareCountSpan.textContent = parseInt(shareCountSpan.textContent) + 1;
+    }
+}
+
+    </script>
+  </body>
+</html>
